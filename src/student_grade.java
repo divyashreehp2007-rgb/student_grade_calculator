@@ -5,10 +5,11 @@ import static java.lang.Integer.sum;
 public class student_grade {
     static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("-----student grade calculator-----");
-        System.out.print("enter your name:");
+        System.out.println("-----student grade calculator-----");
+        System.out.print("enter your name: ");
         String name = input.nextLine();
-        System.out.print("enter the five subject marks: ");
+        System.out.print("enter your usn: ");
+        char USN = input.next().trim().charAt(0);
         System.out.print("enter the first subject mark: ");
         int m1 = input.nextInt();
         System.out.print("enter the second subject mark: ");
@@ -23,9 +24,9 @@ public class student_grade {
         float percentage = (total / 5.0f);
         System.out.print("grade: " + percentage);
         if (m1 > 35 && m2 > 35 &&  m3 > 35 &&  m4 > 35 &&  m5 > 35) {
-            System.out.println("Result: PASS");
+            System.out.println("\nResult: PASS");
         } else {
-            System.out.println("result: FAIL");
+            System.out.println("\nresult: FAIL");
         }
         if (percentage >= 90 ) {
             System.out.println("Grade: A+");

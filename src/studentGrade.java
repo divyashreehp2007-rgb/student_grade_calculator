@@ -1,15 +1,13 @@
 import java.util.Scanner;
 
-import static java.lang.Integer.sum;
-
-public class student_grade {
-    static void main(String[] args) {
+public class studentGrade {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("--------student grade calculator--------");
         System.out.print("Name      : ");
         String name = input.nextLine();
         System.out.print("USN       : ");
-        char USN = input.next().trim().charAt(0);
+        String USN = input.next();
         System.out.print("Subject 1 : ");
         int m1 = input.nextInt();
         System.out.print("Subject 2 : ");
@@ -21,7 +19,7 @@ public class student_grade {
         System.out.print("Subject 5 : ");
         int m5= input.nextInt();
         int total = m1 + m2 + m3 + m4 + m5;
-        System.out.print("Total     : " + total);
+        System.out.print("Total     : " + total  + "/500");
         float percentage = (total / 5.0f);
         System.out.print("\nPercentage: " + percentage + "%");
         if (m1 > 35 && m2 > 35 &&  m3 > 35 &&  m4 > 35 &&  m5 > 35) {
@@ -42,6 +40,6 @@ public class student_grade {
         } else if (percentage >= 35 ) {
             System.out.println("Grade     : F");
         }
-
+        input.close();
+        }
     }
-}
